@@ -2,10 +2,32 @@
 
 ## Start
 
-Rdd opencv library in project:
+Clone opencv in version 3.0.0:
 ```
   cd AR
+
   git clone --branch 3.0.0 https://github.com/Itseez/opencv.git
+```
+
+Build:
+```
+  mkdir build
+
+  cd build
+
+  cmake -G "Unix Makefiles" ../opencv/
+```
+
+Make opencv:
+```
+  make -j8
+
+  sudo make install
+```
+
+Make uninstall opencv:
+```
+  sudo make uninstall
 ```
 
 ## Requirement
@@ -33,9 +55,4 @@ Mac
 ## Reference
 
 - [Using OpenCV with gcc and CMake](http://docs.opencv.org/doc/tutorials/introduction/linux_gcc_cmake/linux_gcc_cmake.html)
-
-## Homework 1
-
-### Homework requirement:
-- Use OpenCV to detect faces and eyes captured by your web-cam or mobile device.
-- Use OpenCV (CAMshift) to track the face captured by your web-cam or mobile device (only the first-time appearing face is detected, the same face in the following frames should be tracked rather than being detected)
+- [OPENCV ON MAC OSX: A STEP-BY-STEP GUIDE](http://tilomitra.com/opencv-on-mac-osx/)
