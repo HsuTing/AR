@@ -8,6 +8,20 @@ Rdd opencv library in project:
   git clone --branch 3.0.0 https://github.com/Itseez/opencv.git
 ```
 
+## Requirement
+
+- cmake
+
+Ubuntu
+```
+  sudo apt-get install cmake
+```
+
+Mac
+```
+  brew install cmake
+```
+
 ## Library
 
 ### opencv
