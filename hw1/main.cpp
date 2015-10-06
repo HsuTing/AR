@@ -1,9 +1,7 @@
-#include <iostream>
-#include <cstdlib>
 #include "opencv2/opencv.hpp"
 #include "opencv2/highgui/highgui.hpp"
+#include "FaceDetect/FaceDetect.h"
 
-using namespace std;
 using namespace cv;
 
 int main()
@@ -11,6 +9,8 @@ int main()
     VideoCapture cap(0); // open the default camera
     if(!cap.isOpened())  // check if we succeeded
         return -1;
+
+    FaceDetect test;
 
     Mat frame;
     while(1)
