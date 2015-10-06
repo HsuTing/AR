@@ -4,8 +4,17 @@
 
 Rdd opencv library in project:
 ```
-  git clone https://github.com/Itseez/opencv.git
+  cd AR
+  git clone --branch 3.0.0 https://github.com/Itseez/opencv.git
 ```
+
+## Library
+
+### opencv
+
+- version: 3.0.0
+- [website](http://opencv.org)
+- [github](https://github.com/Itseez/opencv)
 
 ## Reference
 
