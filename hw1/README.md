@@ -16,3 +16,5 @@
 - [webcam capture](http://vincecc.blogspot.tw/2013/11/opencv-webcam-capture.html)
 - [Face Recognizer](http://ccw1986.blogspot.tw/2013/06/opencvfacerecognizer.html)
 - [Face Detection and Face Recognition](http://www.shervinemami.info/faceRecognition.html)
+- [Face Detection](https://cg2010studio.wordpress.com/2011/04/26/opencv-人臉偵測-face-detection/)
+- [Cascade Classifier](http://docs.opencv.org/doc/tutorials/objdetect/cascade_classifier/cascade_classifier.html)
