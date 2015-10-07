@@ -18,3 +18,4 @@
 - [Face Detection and Face Recognition](http://www.shervinemami.info/faceRecognition.html)
 - [Face Detection](https://cg2010studio.wordpress.com/2011/04/26/opencv-人臉偵測-face-detection/)
 - [Cascade Classifier](http://docs.opencv.org/doc/tutorials/objdetect/cascade_classifier/cascade_classifier.html)
+- [Smooth Face Tracking with OpenCV](http://synaptitude.me/blog/smooth-face-tracking-using-opencv/)
