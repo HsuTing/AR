@@ -13,6 +13,7 @@ int main()
   //-- 1. Load the cascades
   Detect detect;
   Mat frame;
+  bool check = false;
 
   //-- 2. Read the video stream
   while(true) {
@@ -20,10 +21,16 @@ int main()
 
     //-- 3. Apply the classifier to the frame
     if(!frame.empty()) {
-      detect.detect(frame);
+      if(!check) {
+        check = detect.detect(frame);
+      }
+      else {
+        check = detect.track(frame);
+      }
     }
     else {
       cout << " --(!) No captured frame -- Break!" << endl;
+      check = false;
       break;
     }
 
