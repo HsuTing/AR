@@ -53,6 +53,7 @@ bool Detect::detect(Mat frame) {
       cvtColor(frame, hsv, CV_BGR2HSV);
       hue.create(hsv.size(), hsv.depth());
       mixChannels(&hsv, 1, &hue, 1, ch, 1);
+      inRange(hsv, Scalar(0, 256, 256), Scalar(180, 256, 256), mask);
 
       Mat roi(hue, faces[i]), maskroi(mask, faces[i]);
       calcHist(&roi, 1, 0, maskroi, hist, 1, &hsize, &phranges);
@@ -71,7 +72,16 @@ bool Detect::track(Mat frame) {
   bool check = false;
 
   calcBackProject(&hue, 1, 0, hist, backproj, &phranges);
-  RotatedRect trackBox = CamShift(backproj, trackWindow, TermCriteria( CV_TERMCRIT_EPS | CV_TERMCRIT_ITER, 10, 1 ));
+  RotatedRect trackBox = CamShift(backproj, faces[0], TermCriteria(CV_TERMCRIT_EPS | CV_TERMCRIT_ITER, 10, 1));
+
+  ellipse(frame, trackBox, Scalar(0,0,255), 3, CV_AA);
+/*  for(size_t j = 0; j < eyes.size(); j++) {
+    Point center(faces[0].x + eyes[j].x + eyes[j].width*0.5, faces[0].y + eyes[j].y + eyes[j].height*0.5);
+    int radius = cvRound((eyes[j].width + eyes[j].height)*0.25);
+    circle(frame, trackBox, radius, Scalar(255, 0, 0), 4, 8, 0);
+  }*/
+
+  imshow("webcam live", frame);
 
   return check;
 }
