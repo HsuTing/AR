@@ -15,5 +15,12 @@
 ```
   ./main
 ```
+## Require
+
+- Install extra modules -> (opencv_contrib)[https://github.com/Itseez/opencv_contrib]
 
 ## Reference
+
+## Issue
+
+- It is not work, modules can not work.

@@ -1,6 +1,7 @@
 *.swp
 *.o
 opencv
+opencv_contrib
 build
 *log
 .DS_Store
